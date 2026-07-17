@@ -181,7 +181,10 @@ export default function WorkshopDetailPage() {
       const resData = await response.json();
 
       if (!response.ok || !resData.success) {
-        throw new Error(resData.error || "Failed to initiate payment. Server replied with an error.");
+        const errorMsg = resData.details 
+          ? `${resData.error} (${resData.details})`
+          : (resData.error || "Failed to initiate payment. Server replied with an error.");
+        throw new Error(errorMsg);
       }
 
       const { payment_session_id, payment_mode } = resData;

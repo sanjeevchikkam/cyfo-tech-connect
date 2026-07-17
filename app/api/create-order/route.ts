@@ -84,9 +84,12 @@ export async function POST(req: NextRequest) {
     // so req.nextUrl.origin results in 'http://localhost:3000' or similar http URL.
     // We construct the correct external HTTPS URL using the forwarded headers or host.
     const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || req.nextUrl.host;
-    const origin = `https://${host}`;
+    const proto = req.headers.get("x-forwarded-proto") || (host.includes("localhost") || host.includes("127.0.0.1") ? "http" : "https");
+    const origin = `${proto}://${host}`;
     const returnUrl = `${origin}/api/payment-callback?order_id=${ticketId}`;
     const notifyUrl = `${origin}/api/webhook/cashfree`;
+
+    console.log(`[Cashfree API] Creating order in environment: ${process.env.CASHFREE_ENV || "sandbox"} for ticket: ${ticketId}`);
 
     // 4. Create Cashfree Order
     try {
@@ -102,6 +105,18 @@ export async function POST(req: NextRequest) {
         returnUrl,
         notifyUrl
       });
+
+      // Securely store the created Cashfree order metadata (cf_order_id, payment_session_id, etc.) in the database
+      const { error: updatePayError } = await dbClient
+        .from("payments")
+        .update({
+          raw_response: cfOrder
+        })
+        .eq("ticket_id", ticketId);
+
+      if (updatePayError) {
+        console.error("Database error updating payment record with Cashfree order info:", updatePayError);
+      }
 
       return NextResponse.json({
         success: true,
