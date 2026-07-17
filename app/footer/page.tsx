@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function FooterPage() {
   const quickLinks = [
     { label: "Home", href: "/" },
-    { label: "Workshops", href: "/#workshops" },
+    { label: "Workshops", href: "/workshop" },
     { label: "Gallery", href: "/gallery" },
     { label: "Our Story", href: "/ourstory" },
     { label: "Speakers", href: "/speakers" },
@@ -130,7 +130,7 @@ export default function FooterPage() {
                     href="mailto:contact@cyfotechconnect.com"
                     className="text-sm font-semibold text-white hover:text-[#00E5FF] transition-colors"
                   >
-                    st7groupofcompanies@gmail.com
+                    contact@cyfotechconnect.com
                   </a>
                 </div>
               </li>

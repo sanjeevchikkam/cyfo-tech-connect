@@ -9,7 +9,7 @@ export default function HeaderPage() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Workshops", href: "/#workshops" },
+    { label: "Workshops", href: "/workshop" },
     { label: "Gallery", href: "/gallery" },
     { label: "Our Story", href: "/ourstory" },
     { label: "Speakers", href: "/speakers" },
@@ -21,8 +21,8 @@ export default function HeaderPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center gap-3">
-            <div className="relative w-9 h-9 flex items-center justify-center rounded-lg bg-[#00E5FF]/10 border border-[#00E5FF]/30 overflow-hidden">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 flex items-center justify-center rounded-lg bg-[#00E5FF]/10 border border-[#00E5FF]/30 overflow-hidden transition-all duration-300 group-hover:border-[#00E5FF]/60 group-hover:bg-[#00E5FF]/20">
               <img
                 src="/logo.png"
                 alt="Logo"
@@ -50,10 +50,10 @@ export default function HeaderPage() {
                 />
               </svg>
             </div>
-            <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-[#FFFFFF]">
+            <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-[#FFFFFF] group-hover:text-[#00E5FF] transition-colors duration-200">
               Cyfo <span className="text-[#00E5FF]">Tech Connect</span>
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation - Brightened up text from #94A3B8 to #E2E8F0 */}
           <nav className="hidden md:flex items-center gap-8">

@@ -82,17 +82,17 @@ export default function HeroPage() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          {/* Primary Premium Action Button */}
-          <button
-            type="button"
-            className="w-full sm:w-auto relative group p-[1px] rounded-xl bg-gradient-to-r from-[#00E5FF] via-[#2563EB] to-[#8B5CF6] text-white font-bold text-base tracking-wide shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+          {/* Primary Premium Action Link */}
+          <Link
+            href="/workshop"
+            className="w-full sm:w-auto relative group p-[1px] rounded-xl bg-gradient-to-r from-[#00E5FF] via-[#2563EB] to-[#8B5CF6] text-white font-bold text-base tracking-wide shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer inline-block"
           >
             <div className="px-8 py-3.5 bg-zinc-950/90 rounded-[11px] group-hover:bg-transparent transition-all duration-300 flex items-center justify-center gap-2">
-              <span className="relative z-10 flex items-center gap-2 text-white">
+              <span className="relative z-10 flex items-center gap-2 text-white font-bold">
                 Register Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>
-          </button>
+          </Link>
 
           {/* Secondary Premium Action Link to Gallery */}
           <Link

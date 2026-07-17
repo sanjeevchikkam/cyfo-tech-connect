@@ -4,6 +4,7 @@ import GalleryPreview from "../components/GalleryPreview";
 import OurStorySection from "../components/OurStorySection";
 import OurSpeakersSection from "../components/OurSpeakersSection";
 import TestimonialsSection from "../components/TestimonialsSection";
+import WorkshopSection from "../components/WorkshopSection";
 import ContactSection from "../components/ContactSection";
 import FooterPage from "./footer/page";
 
@@ -18,6 +19,8 @@ export default function Home() {
         {/* Hero Section */}
         <HeroPage />
         
+         {/* Interactive Workshop Preview Section */}
+        <WorkshopSection />
         {/* Interactive Gallery Preview Section */}
         <GalleryPreview />
 
