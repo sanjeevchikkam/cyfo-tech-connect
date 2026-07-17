@@ -78,7 +78,7 @@ export default function WorkshopSection() {
           }
 
           setWorkshop({
-            id: row.id || "1",
+            id: row.workshop_id || row.id || "1",
             title: row.title || "No Title",
             description: row.description || "",
             topics: topics.length > 0 ? topics : [],

@@ -28,3 +28,13 @@ export const supabase = isValidSupabaseUrl(supabaseUrl) && isKeyValid
   ? createClient(supabaseUrl, supabaseAnonKey) 
   : null;
 
+
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey;
+export const supabaseAdmin = isValidSupabaseUrl(supabaseUrl) && (supabaseServiceKey && supabaseServiceKey.startsWith("eyJ"))
+  ? createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      }
+    })
+  : null;

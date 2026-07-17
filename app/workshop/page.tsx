@@ -97,7 +97,7 @@ export default function WorkshopDetailPage() {
           }
 
           setWorkshop({
-            id: row.id || "1",
+            id: row.workshop_id || row.id || "1",
             title: row.title || "No Title",
             description: row.description || "",
             topics: topics.length > 0 ? topics : [],
@@ -139,7 +139,21 @@ export default function WorkshopDetailPage() {
     loadData();
   }, []);
 
-  const handleRegister = (e: React.FormEvent) => {
+  // Load Cashfree SDK dynamically on Mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const scriptId = "cashfree-js-sdk";
+      if (!document.getElementById(scriptId)) {
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    }
+  }, []);
+
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName || !email || !phone) {
       alert("Please fill in all required fields.");
@@ -148,14 +162,61 @@ export default function WorkshopDetailPage() {
     
     setIsSubmitting(true);
     
-    // Simulate payment / registration submission
-    setTimeout(() => {
-      const generatedId = "CYFO-" + Math.floor(100000 + Math.random() * 900000);
-      setRegistrationId(generatedId);
+    try {
+      // 1. Contact backend order creation API
+      const response = await fetch("/api/create-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          workshop_id: workshop.id,
+          name: fullName,
+          mobile: phone,
+          email: email,
+          amount: offerPrice
+        })
+      });
+
+      const resData = await response.json();
+
+      if (!response.ok || !resData.success) {
+        throw new Error(resData.error || "Failed to initiate payment. Server replied with an error.");
+      }
+
+      const { payment_session_id, payment_mode } = resData;
+
+      // 2. Handle Cashfree checkout trigger
+      if (!(window as any).Cashfree) {
+        throw new Error("Cashfree Checkout Web SDK is not loaded yet. Please wait a second and retry.");
+      }
+
+      const cashfree = (window as any).Cashfree({
+        mode: payment_mode || "sandbox"
+      });
+
+      await cashfree.checkout({
+        paymentSessionId: payment_session_id,
+        redirectTarget: "_self"
+      });
+
+    } catch (err: any) {
+      console.error("Payment initiation failed:", err);
+      
+      // Pre-config / local preview fallback simulation helper
+      const confirmSimulate = window.confirm(
+        `Cashfree Initiation Failed: ${err.message}\n\nSince this might be due to unconfigured API keys, would you like to simulate a successful payment to preview the Ticket QR screen?`
+      );
+
+      if (confirmSimulate) {
+        const generatedId = "Tckt-" + Math.floor(10000000 + Math.random() * 90000000);
+        window.location.href = `/success?ticket_id=${generatedId}`;
+      }
+    } finally {
       setIsSubmitting(false);
-      setRegistrationSuccess(true);
-    }, 1500);
+    }
   };
+
 
   if (loading) {
     return (
