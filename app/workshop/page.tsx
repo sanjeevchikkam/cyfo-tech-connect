@@ -269,6 +269,23 @@ export default function WorkshopDetailPage() {
           </Link>
         </div>
 
+        <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
+              <img 
+                src={poster} 
+                alt={title}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/workshopmock1.png";
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent pointer-events-none" />
+              {isActive && (
+                <div className="absolute bottom-4 left-4 right-4 bg-[#050816]/90 backdrop-blur-md px-4 py-3 rounded-xl border border-white/[0.08] flex justify-between items-center z-10">
+                  <span className="text-xs font-mono text-[#94A3B8]">Remaining Slots:</span>
+                  <span className="text-sm font-bold font-mono text-[#00E5FF]">{slots} Seats</span>
+                </div>
+              )}
+            </div>
         {/* Content Panel */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
@@ -363,7 +380,7 @@ export default function WorkshopDetailPage() {
           <div className="lg:col-span-5 space-y-8">
             
             {/* Poster display */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
+            {/* <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
               <img 
                 src={poster} 
                 alt={title}
@@ -379,7 +396,7 @@ export default function WorkshopDetailPage() {
                   <span className="text-sm font-bold font-mono text-[#00E5FF]">{slots} Seats</span>
                 </div>
               )}
-            </div>
+            </div> */}
 
             {/* Registration Form / Status Card */}
             {isActive ? (

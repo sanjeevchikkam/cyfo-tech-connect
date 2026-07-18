@@ -25,7 +25,7 @@ export default function OurStorySection() {
     },
     {
       year: "2026",
-      title: "Tech Connect",
+      title: "Cyfo Tech Connect",
       desc: "Immersive live workshops & events.",
       icon: Sparkles,
     },
