@@ -109,12 +109,12 @@ export default function FooterPage() {
                 <div className="space-y-0.5">
                   <p className="text-[10px] uppercase tracking-wider text-[#94A3B8]">WhatsApp Helpline</p>
                   <a
-                    href="https://wa.me/918341330784"
+                    href="https://wa.me/918019002701"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-semibold text-white hover:text-[#00E5FF] transition-colors"
                   >
-                    83413 30784
+                    80190 02701
                   </a>
                 </div>
               </li>
@@ -127,10 +127,10 @@ export default function FooterPage() {
                 <div className="space-y-0.5">
                   <p className="text-[10px] uppercase tracking-wider text-[#94A3B8]">Email Inquiry</p>
                   <a
-                    href="mailto:contact@cyfotechconnect.com"
+                    href="mailto:st7surveillancesolutions@gmail.com"
                     className="text-sm font-semibold text-white hover:text-[#00E5FF] transition-colors"
                   >
-                    contact@cyfotechconnect.com
+                    st7surveillancesolutions@gmail.com
                   </a>
                 </div>
               </li>

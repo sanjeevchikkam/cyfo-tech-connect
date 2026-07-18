@@ -21,7 +21,7 @@ export default function EnquiryForm() {
     "Workshop volunteer",
     "general cyber security enquiry",
     "Cyfo anti hack app",
-    "St7 member"
+    "ST7 member"
   ];
 
   const getCompiledWhatsAppUrl = () => {
@@ -33,7 +33,7 @@ export default function EnquiryForm() {
       `🎯 *Interest:* ${formData.interest}\n` +
       `💬 *Message:* ${formData.message.trim() || "No message provided."}`
     );
-    return `https://wa.me/918341330784?text=${formattedMessage}`;
+    return `https://wa.me/918019002701?text=${formattedMessage}`;
   };
 
   const validateForm = () => {

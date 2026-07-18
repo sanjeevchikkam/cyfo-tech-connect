@@ -22,7 +22,7 @@ const TIMELINE = [
   },
   {
     year: "2023",
-    title: "Parul University Gold Medal",
+    title: "Presidential Gold Medal",
     description: "Awarded the prestigious Gold Medal for outstanding contribution to Cybersecurity services and student alignment programs at Parul University.",
     icon: Award,
     color: "from-[#8B5CF6] to-[#00E5FF]",
@@ -30,8 +30,8 @@ const TIMELINE = [
   },
   {
     year: "2024",
-    title: "Cyfo Anti Hack Rollout",
-    description: "Released the custom-built Cyfo Anti Hack software suite to the public, gathering exceptional feedback for simplifying complex threat prevention.",
+    title: "Cyfo Anti Hack App",
+    description: "Released the custom-built Cyfo Anti Hack App suite to the public, gathering exceptional feedback for simplifying complex threat prevention.",
     icon: Shield,
     color: "from-emerald-500 to-teal-500",
     badge: "Product Launch"
@@ -82,7 +82,7 @@ export default function OurStoryPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-2xl mx-auto">
-              Cyfo Tech Connect is proudly powered by <span className="text-white font-bold">St7 Group</span>, a pioneering tech conglomerate with a massive footprint in cybersecurity solutions, deep software engineering, and community-empowering digital products.
+              Cyfo Tech Connect is proudly powered by <span className="text-white font-bold">ST7 Group</span>, a pioneering tech conglomerate with a massive footprint in cybersecurity solutions, deep software engineering, and community-empowering digital products.
             </p>
 
             <div className="pt-4 flex flex-wrap justify-center gap-6 text-xs sm:text-sm font-semibold text-[#CBD5E1]">
@@ -92,11 +92,15 @@ export default function OurStoryPage() {
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.02] border border-white/[0.06]">
                 <span className="w-2 h-2 rounded-full bg-[#00E5FF]" />
-                Powered by St7 Group
+                Powered by ST7 Group
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.02] border border-white/[0.06]">
                 <span className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
                 100% Trust & Practical Focus
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.02] border border-white/[0.06]">
+                <span className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
+                71st Global Ranked Company Among 800+ Competitors
               </div>
             </div>
           </div>
@@ -111,13 +115,13 @@ export default function OurStoryPage() {
               <div className="flex flex-col sm:flex-row items-center gap-6 text-left">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-[#2563EB] to-[#00E5FF] p-0.5 shrink-0">
                   <div className="w-full h-full bg-[#050816] rounded-[14px] flex items-center justify-center text-[#00E5FF] font-bold text-2xl tracking-tighter">
-                    St7
+                    ST7
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-white">About St7 Group</h3>
+                  <h3 className="text-lg font-bold text-white">About ST7 Group</h3>
                   <p className="text-sm text-[#94A3B8] leading-relaxed">
-                    St7 Group stands at the forefront of digital defense, product design, and next-generation educational technologies. By driving engineering excellence and ethical hacking mentorship, St7 group protects enterprise infrastructures while preparing the next wave of defense technicians.
+                    ST7 Group stands at the forefront of digital defense, product design, and next-generation educational technologies. By driving engineering excellence and ethical hacking mentorship, ST7 group protects enterprise infrastructures while preparing the next wave of defense technicians.
                   </p>
                 </div>
               </div>
@@ -217,9 +221,10 @@ export default function OurStoryPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {/* Primary Action */}
               <a
-                href="https://wa.me/918341330784"
-                target="_blank"
-                rel="noopener noreferrer"
+                // href="https://wa.me/918341330784"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                href="/workshop"
                 className="w-full sm:w-auto relative group p-[1px] rounded-xl bg-gradient-to-r from-[#00E5FF] via-[#2563EB] to-[#8B5CF6] text-white font-bold text-base tracking-wide shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:shadow-[0_0_35px_rgba(0,229,255,0.5)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
               >
                 <div className="px-8 py-3.5 bg-zinc-950/90 rounded-[11px] group-hover:bg-transparent transition-all duration-300 flex items-center justify-center gap-2">

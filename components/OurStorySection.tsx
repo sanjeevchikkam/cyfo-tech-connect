@@ -19,7 +19,7 @@ export default function OurStorySection() {
     },
     {
       year: "2024",
-      title: "Cyfo Anti Hack",
+      title: "Cyfo Anti Hack App",
       desc: "High-impact public security release.",
       icon: Shield,
     },
@@ -48,12 +48,12 @@ export default function OurStorySection() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold tracking-tight text-white leading-tight">
               An Authentic Legacy <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#2563EB] to-[#8B5CF6]">
-                Powered by St7 Group
+                Powered by ST7 Group
               </span>
             </h2>
 
             <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-              Cyfo Tech Connect is backed by the exceptional resources and industry prowess of <strong className="text-[#E2E8F0]">St7 Group</strong>. From a compact team in 2020, we have secured critical platforms, developed security suites, and won academic acclaim across India.
+              Cyfo Tech Connect is backed by the exceptional resources and industry prowess of <strong className="text-[#E2E8F0]">ST7 Group</strong>. From a compact team in 2020, we have secured critical platforms, developed security suites, and won academic acclaim across India.
             </p>
 
             <div className="pt-2">

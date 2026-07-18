@@ -17,8 +17,8 @@ export interface Speaker {
 export const SPEAKERS_DATA: Speaker[] = [
   {
     name: "Surya Teja",
-    designation: "CEO of St7",
-    description: "Entrepreneur with a strong thrive to contribute to the world. Pioneering modern cybersecurity frameworks, industry-aligned tech curriculum, and secure product mentorship at St7 Group.",
+    designation: "CEO of ST7",
+    description: "Entrepreneur with a strong thrive to contribute to the world. Pioneering modern cybersecurity frameworks, industry-aligned tech curriculum, and secure product mentorship at ST7 Group.",
     experience: "6 years",
     sessionsConducted: "100+",
     accentColor: "from-[#00E5FF] via-[#2563EB] to-[#8B5CF6]",

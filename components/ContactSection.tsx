@@ -26,7 +26,7 @@ export default function ContactSection() {
               <h2 className="text-3xl sm:text-4xl font-sans font-bold tracking-tight text-white leading-tight">
                 Secure Your Seat <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#2563EB] to-[#8B5CF6]">
-                  With St7 Coordinators
+                  With ST7 Coordinators
                 </span>
               </h2>
 

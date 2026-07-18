@@ -17,9 +17,9 @@ export default function ContactUsPage() {
     {
       icon: MessageSquare,
       title: "WhatsApp Security Desk",
-      value: "+91 83413 30784",
+      value: "+91 80190 02701",
       description: "Open for general query resolutions, registration confirmations, and technical assistance.",
-      link: "https://wa.me/918341330784",
+      link: "https://wa.me/918019002701",
     },
     {
       icon: Clock,
@@ -30,8 +30,14 @@ export default function ContactUsPage() {
     {
       icon: MapPin,
       title: "Corporate Headquarters",
-      value: "St7 Group, Bangalore, Karnataka, India",
+      value: "ST7 Group, Vadodara, Gujarat, India",
       description: "Driving digital resilience, products, and authorized educational seminars.",
+    },
+    {
+      icon: MapPin,
+      title: "South Headquarters",
+      value: "ST7 Group, Hyderabad, Telangana, India",
+      description: "Driving digital products, and authorized educational seminars.",
     },
   ];
 
