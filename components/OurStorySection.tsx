@@ -14,7 +14,7 @@ export default function OurStorySection() {
     {
       year: "2023",
       title: "Gold Medal",
-      desc: "Cyber security honors at Parul University.",
+      desc: "Cyber security honors.",
       icon: Award,
     },
     {
