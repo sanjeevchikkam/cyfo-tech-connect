@@ -6,19 +6,19 @@ import { ArrowRight, Compass, Sparkles, Image as ImageIcon } from "lucide-react"
 export default function GalleryPreview() {
   const previews = [
     {
-      src: "/gallery01.png",
+      src: "/gallery10.jpg",
       title: "University Lab Bootcamp",
       location: "Bangalore",
       className: "md:col-span-2 md:row-span-1",
     },
     {
-      src: "/gallery03.png",
+      src: "/gallery02.jpg",
       title: "Collegiate Cyber-Range CTF",
       location: "Mumbai",
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      src: "/gallery10.png",
+      src: "/gallery11.jpg",
       title: "Hardware Security & IoT Lab",
       location: "Bangalore",
       className: "md:col-span-1 md:row-span-1",
