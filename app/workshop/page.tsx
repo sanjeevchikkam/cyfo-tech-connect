@@ -709,7 +709,7 @@ export default function WorkshopDetailPage() {
                     </div>
 
                     {/* Submit Button */}
-                    <button
+                    {/*<button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full py-4 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#2563EB] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] text-white text-sm font-bold tracking-wide transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2"
@@ -725,13 +725,13 @@ export default function WorkshopDetailPage() {
                           <span>Pay & Register Now</span>
                         </>
                       )}
-                    </button>
+                    </button>*/}
 
                     {/* WhatsApp Pay Option */}
                     <div className="mt-4 pt-4 border-t border-white/[0.08] text-center space-y-2">
-                      <p className="text-[11px] font-mono text-[#94A3B8] uppercase tracking-wider">
+                      {/* <p className="text-[11px] font-mono text-[#94A3B8] uppercase tracking-wider">
                         Cashfree Not Working??
-                      </p>
+                      </p> */}
                       <button
                         type="button"
                         onClick={handlePayViaWhatsapp}
@@ -841,13 +841,22 @@ export default function WorkshopDetailPage() {
               </p>
 
               <div className="space-y-3 pt-2">
-                <div className="relative">
+                {/* <div className="relative">
                   <input
                     type="text"
                     placeholder="Enter Ticket ID or Mobile Number"
                     value={ticketSearchQuery}
                     onChange={(e) => setTicketSearchQuery(e.target.value)}
                     className="w-full px-4 py-2.5 rounded-lg bg-[#050816] border border-white/10 focus:border-[#00E5FF] focus:outline-none text-xs transition-all placeholder:text-white/20"
+                  />
+                </div> */}
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Enter Ticket ID or Mobile Number"
+                    value={ticketSearchQuery}
+                    onChange={(e) => setTicketSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-lg bg-white border border-gray-300 focus:border-[#00E5FF] focus:outline-none text-xs text-gray-900 transition-all placeholder:text-gray-600 placeholder:font-semibold"
                   />
                 </div>
 
