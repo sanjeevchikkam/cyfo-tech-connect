@@ -5,122 +5,123 @@ import { Quote, Star, UserCheck, ShieldCheck, Award } from "lucide-react";
 interface Testimonial {
   name: string;
   role: string;
-  category: "Student" | "Professional" | "Founder";
+  category: "Student Founder" | "Professional" | "Student";
   content: string;
   rating: number;
 }
 
 const TESTIMONIALS: Testimonial[] = [
   // Founders (5)
-  {
-    name: "Rajesh K. Verma",
-    role: "Founder, SecureOps India",
-    category: "Founder",
-    content: "Surya Teja's session on early-stage threat mitigation completely restructured how we approach our product's initial launch security. Absolute goldmine of information.",
-    rating: 5,
-  },
-  {
-    name: "Meera Al-Subhi",
-    role: "Co-Founder, TechNest Labs",
-    category: "Founder",
-    content: "The cybersecurity playbook shared here helped us audit our systems and secure $2M seed funding with absolute confidence. Highly recommend their professional workshops.",
-    rating: 5,
-  },
-  {
-    name: "Arjun Singhal",
-    role: "Founder, AgriSafe Systems",
-    category: "Founder",
-    content: "Practical, zero-fluff knowledge on threat models. As a founder, understanding risk exposure is key, and Cyfo Tech broke it down perfectly in just three days.",
-    rating: 5,
-  },
-  {
-    name: "Nicolette Durand",
-    role: "CEO, ShieldGrid Technologies",
-    category: "Founder",
-    content: "An outstanding blend of industry leadership and compliance standards. This team is raising the bar for cybersecurity training in India and beyond.",
-    rating: 5,
-  },
-  {
-    name: "Vikram Malhotra",
-    role: "Founder, Cy-Dura",
-    category: "Founder",
-    content: "Surya's charisma and deep hands-on background make him one of the most reliable secure architecture speakers we've ever invited. Simply outstanding.",
-    rating: 5,
-  },
+  // Student Founders (5)
+{
+  name: "Aditya Reddy",
+  role: "Student Founder, SecureByte Labs, Hyderabad",
+  category: "Student Founder",
+  content: "The workshop gave me a clear understanding of cybersecurity fundamentals for startups. The practical sessions helped us strengthen our MVP before approaching potential investors.",
+  rating: 5,
+},
+{
+  name: "Harsh Patel",
+  role: "Co-Founder, CyberHive, Vadodara",
+  category: "Student Founder",
+  content: "The sessions were practical and focused on real business challenges. We implemented several security best practices directly into our product development process.",
+  rating: 5,
+},
+{
+  name: "Sneha Ramesh",
+  role: "Founder, SafeStack Campus Initiative, Hyderabad",
+  category: "Student Founder",
+  content: "I appreciated how every concept was explained with live demonstrations. It gave our team the confidence to build security into our project from day one.",
+  rating: 5,
+},
+{
+  name: "Karan Shah",
+  role: "Founder, NexShield, Vadodara",
+  category: "Student Founder",
+  content: "The workshop balanced technical depth with startup practicality. The threat modeling exercises were especially valuable for our early-stage product.",
+  rating: 5,
+},
+{
+  name: "Pranav Goud",
+  role: "Student Entrepreneur, Hyderabad",
+  category: "Student Founder",
+  content: "Cyfo Tech Connect helped me understand how cybersecurity fits into modern startups. Every session was interactive, practical, and immediately applicable.",
+  rating: 5,
+},
 
-  // Professionals (5)
-  {
-    name: "Sandeep Deshmukh",
-    role: "Senior Security Analyst, Infosys",
-    category: "Professional",
-    content: "Excellent coverage of red-teaming simulations and live exploits. It is rare to see facilitators who actively solve zero-days in real-time.",
-    rating: 5,
-  },
-  {
-    name: "Anjali Krishnan",
-    role: "Cloud DevOps Engineer, Wipro",
-    category: "Professional",
-    content: "The zero-trust setup strategies explained in the sessions were incredibly practical. I integrated several points directly into our enterprise production pipelines.",
-    rating: 5,
-  },
-  {
-    name: "Tariq Mahmood",
-    role: "Cybersecurity Lead, Qatar Petroleum",
-    category: "Professional",
-    content: "One of the most engaging cybersecurity seminars I have attended in years. The live response drill alone was worth the entire session registration.",
-    rating: 5,
-  },
-  {
-    name: "Preeti Adhikari",
-    role: "Software Architect, TCS",
-    category: "Professional",
-    content: "I finally understood key cryptographic handshakes and threat modeling. These speakers bridge theory with genuine tactical application flawlessly.",
-    rating: 5,
-  },
-  {
-    name: "David Sterling",
-    role: "Lead Penetration Tester, Cognizant",
-    category: "Professional",
-    content: "They cut through all the academic theory and showed us actual real-world network pivot mechanisms. Exceptional technical clarity.",
-    rating: 5,
-  },
+// Professionals (Aspirants) (5)
+{
+  name: "Ritika Joshi",
+  role: "Cybersecurity Aspirant, Vadodara",
+  category: "Professional",
+  content: "The hands-on labs were exactly what I was looking for. Instead of only theory, we solved practical security challenges that improved my confidence.",
+  rating: 5,
+},
+{
+  name: "Mohammed Faizan",
+  role: "Cloud & Security Enthusiast, Hyderabad",
+  category: "Professional",
+  content: "The instructors explained complex topics like network security and threat analysis in a very approachable way. Great learning experience.",
+  rating: 5,
+},
+{
+  name: "Priyansh Desai",
+  role: "SOC Analyst Aspirant, Vadodara",
+  category: "Professional",
+  content: "One of the few workshops that focused on practical scenarios rather than slides. The live demonstrations made every concept easier to understand.",
+  rating: 5,
+},
+{
+  name: "Ayesha Fatima",
+  role: "DevSecOps Learner, Hyderabad",
+  category: "Professional",
+  content: "The sessions introduced industry practices that I could immediately explore on my own lab setup. Highly recommended for anyone starting in cybersecurity.",
+  rating: 5,
+},
+{
+  name: "Nirav Trivedi",
+  role: "Ethical Hacking Aspirant, Vadodara",
+  category: "Professional",
+  content: "Excellent workshop with a good balance of fundamentals and practical exercises. The mentors encouraged questions and provided clear explanations throughout.",
+  rating: 5,
+},
 
-  // Students (5)
-  {
-    name: "Nikhil Chawla",
-    role: "B.Tech CSE, IIT Hyderabad",
-    category: "Student",
-    content: "The hands-on reverse engineering workshop gave me more practical skills than an entire semester. Landed a security internship right after!",
-    rating: 5,
-  },
-  {
-    name: "Divya Tejaswi",
-    role: "M.Tech Cyber Security, NIT Warangal",
-    category: "Student",
-    content: "Absolutely mind-blowing sessions. Surya Teja's energy is contagious, and his live-hacking demonstrations make complex concepts incredibly fun.",
-    rating: 5,
-  },
-  {
-    name: "Saurav Patnaik",
-    role: "Information Security Student, VIT",
-    category: "Student",
-    content: "These sessions are structured perfectly for students aiming for red/blue team roles. Excellent career guidance and resume checkpoints too.",
-    rating: 5,
-  },
-  {
-    name: "Tanya Sen",
-    role: "B.Sc Forensic Science, Amity",
-    category: "Student",
-    content: "Highly interactive and accessible! Even without a deep systems programming background, the foundational security concepts were made simple to grasp.",
-    rating: 5,
-  },
-  {
-    name: "Rahul Kadam",
-    role: "Diploma in Information Security, CDAC",
-    category: "Student",
-    content: "I attended 3 consecutive Cyfo workshops. The credentials and reference manuals they shared are outstanding study guides for OSCP preparation.",
-    rating: 5,
-  },
+// Students (5)
+{
+  name: "Sai Charan",
+  role: "B.Tech CSE Student, Hyderabad",
+  category: "Student",
+  content: "This workshop introduced me to cybersecurity in a very practical way. The live exercises made learning enjoyable and easy to follow.",
+  rating: 5,
+},
+{
+  name: "Krisha Patel",
+  role: "Computer Engineering Student, Vadodara",
+  category: "Student",
+  content: "The sessions were interactive and beginner-friendly. I now have much better clarity on career opportunities in cybersecurity.",
+  rating: 5,
+},
+{
+  name: "Rohit Yadav",
+  role: "B.Tech Student, Hyderabad",
+  category: "Student",
+  content: "I enjoyed the hands-on approach and real-world examples. The workshop motivated me to start building my own cybersecurity lab at home.",
+  rating: 5,
+},
+{
+  name: "Dhwani Shah",
+  role: "IT Student, Vadodara",
+  category: "Student",
+  content: "The mentors explained every topic patiently and encouraged active participation. It was one of the most engaging technical workshops I've attended.",
+  rating: 5,
+},
+{
+  name: "Abhinav Reddy",
+  role: "Cybersecurity Student, Hyderabad",
+  category: "Student",
+  content: "From networking basics to security concepts, everything was explained clearly with practical demonstrations. I left with valuable knowledge and resources.",
+  rating: 5,
+},
 ];
 
 export default function TestimonialsSection() {
