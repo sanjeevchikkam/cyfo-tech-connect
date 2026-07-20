@@ -166,7 +166,7 @@ export default function TestimonialsSection() {
               {/* Category indicator pill */}
               <div className="absolute top-6 right-6">
                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                  item.category === 'Founder' 
+                  item.category === 'Student' 
                     ? 'bg-purple-500/10 text-purple-400 border-purple-500/20'
                     : item.category === 'Professional'
                     ? 'bg-blue-500/10 text-blue-400 border-blue-500/20'
@@ -218,7 +218,7 @@ export default function TestimonialsSection() {
               {/* Category indicator pill */}
               <div className="absolute top-6 right-6">
                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                  item.category === 'Founder' 
+                  item.category === 'Student' 
                     ? 'bg-purple-500/10 text-purple-400 border-purple-500/20'
                     : item.category === 'Professional'
                     ? 'bg-blue-500/10 text-blue-400 border-blue-500/20'
