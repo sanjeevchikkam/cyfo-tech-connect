@@ -556,9 +556,9 @@ export default function WorkshopDetailPage() {
                     <div className="mx-auto w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                       <ShieldCheck className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-white font-sans">Registration Confirmed!</h3>
+                    <h3 className="text-xl font-bold text-white font-sans">Registration Done!</h3>
                     <p className="mt-2 text-xs text-[#94A3B8] max-w-xs mx-auto">
-                      Thank you for enrolling. Your seat has been securely reserved. Confirmation details have been logged.
+                      Thank you for enrolling. Your seat has been securely reserved. Confirmation details will be get once admin Approves payment.
                     </p>
 
                     {/* Ticket Box */}
@@ -581,14 +581,14 @@ export default function WorkshopDetailPage() {
                           <span className="font-semibold text-white">{fullName}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-white/40 font-mono">Status:</span>
-                          <span className="text-emerald-400 font-bold font-mono">Paid (INR {offerPrice})</span>
+                          <span className="text-white/40 font-mono">Payment Status:</span>
+                          <span className="text-emerald-400 font-bold font-mono">Check Below (INR {offerPrice})</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Actions */}
-                    <div className="mt-6 flex gap-3">
+                    {/* <div className="mt-6 flex gap-3">
                       <button 
                         type="button"
                         onClick={() => alert("Ticket receipt downloaded successfully.")}
@@ -605,7 +605,7 @@ export default function WorkshopDetailPage() {
                       >
                         <Share2 className="w-4 h-4" />
                       </button>
-                    </div>
+                    </div> */}
 
                     <button 
                       type="button"
@@ -837,7 +837,7 @@ export default function WorkshopDetailPage() {
                 <span>Generate QR & Ticket Details</span>
               </h4>
               <p className="text-xs text-[#94A3B8] leading-relaxed">
-                If you have paid via WhatsApp or completed your checkout, enter your Ticket ID or registered Mobile Number below to generate your QR entry pass (only active after status is marked as 'Success').
+                If you have paid via WhatsApp or completed your checkout, enter your Ticket ID or registered Mobile Number below to generate your QR entry pass (only active after payment status is marked as 'Success').
               </p>
 
               <div className="space-y-3 pt-2">
