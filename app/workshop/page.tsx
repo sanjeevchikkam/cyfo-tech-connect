@@ -413,136 +413,13 @@ export default function WorkshopDetailPage() {
           </Link>
         </div>
 
-        <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
-              <img 
-                src={poster} 
-                alt={title}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "/workshopmock1.png";
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent pointer-events-none" />
-              {isActive && (
-                <div className="absolute bottom-4 left-4 right-4 bg-[#050816]/90 backdrop-blur-md px-4 py-3 rounded-xl border border-white/[0.08] flex justify-between items-center z-10">
-                  <span className="text-xs font-mono text-[#94A3B8]">Remaining Slots:</span>
-                  <span className="text-sm font-bold font-mono text-[#00E5FF]">{slots} Seats</span>
-                </div>
-              )}
-            </div>
         {/* Content Panel */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* LEFT SIDE: Workshop Info (7 Columns) */}
+          {/* LEFT SIDE: Registration Form & Workshop Info (7 Columns) */}
           <div className="lg:col-span-7 space-y-8">
-            <div className="bg-gradient-to-b from-[#0B1528]/80 to-[#050816]/95 border border-white/[0.08] rounded-2xl p-6 md:p-8 shadow-xl">
-              
-              {/* Badge & Duration */}
-              <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/20 uppercase">
-                  ⭐ Interactive Workshop
-                </span>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-[#94A3B8]">
-                  <Clock className="w-4 h-4 text-[#00E5FF]" />
-                  <span>Duration: {duration}</span>
-                </div>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-3xl md:text-4xl font-sans font-bold text-white tracking-tight leading-tight">
-                {title}
-              </h1>
-
-              {/* Description below the Title (as requested) */}
-              <p className="mt-4 text-sm md:text-base text-[#94A3B8] leading-relaxed">
-                {description}
-              </p>
-
-              {/* Topics (Put as List and tick as requested) */}
-              <div className="mt-8 pt-8 border-t border-white/[0.08]">
-                <h3 className="text-lg font-sans font-semibold text-white mb-4 flex items-center gap-2">
-                  <span className="w-1 h-5 rounded-full bg-[#00E5FF]" />
-                  Curriculum & Hands-on Topics
-                </h3>
-                <ul className="space-y-3.5">
-                  {topics.map((topic, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-[#94A3B8]">
-                      <div className="mt-1 shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-[#00E5FF]">
-                        <CheckCircle className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="leading-tight">{topic}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Speaker Profiles */}
-              {isActive && (
-                <div className="mt-8 pt-8 border-t border-white/[0.08]">
-                  <h3 className="text-lg font-sans font-semibold text-white mb-4 flex items-center gap-2">
-                    <span className="w-1 h-5 rounded-full bg-[#00E5FF]" />
-                    Distinguished Workshop Instructors
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {speakers.map((speaker, idx) => (
-                      <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#2563EB] flex items-center justify-center font-bold font-sans text-sm text-white shadow-md">
-                          {speaker.split(" ").map(n => n[0]).join("")}
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-white">{speaker}</p>
-                          <p className="text-[10px] font-mono text-[#00E5FF] uppercase">Lead Mentor</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Logistics Grid */}
-              <div className="mt-8 pt-8 border-t border-white/[0.08] grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                  <Calendar className="w-5 h-5 text-[#00E5FF] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs font-mono uppercase text-[#64748B]">Date & Time</p>
-                    <p className="text-sm font-semibold text-white mt-1">{dateTime}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                  <MapPin className="w-5 h-5 text-[#00E5FF] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs font-mono uppercase text-[#64748B]">Venue & Format</p>
-                    <p className="text-sm font-semibold text-white mt-1">{venue}</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT SIDE: Checkout & Registration Card (5 Columns) */}
-          <div className="lg:col-span-5 space-y-8">
             
-            {/* Poster display */}
-            {/* <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
-              <img 
-                src={poster} 
-                alt={title}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "/workshopmock1.png";
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent pointer-events-none" />
-              {isActive && (
-                <div className="absolute bottom-4 left-4 right-4 bg-[#050816]/90 backdrop-blur-md px-4 py-3 rounded-xl border border-white/[0.08] flex justify-between items-center z-10">
-                  <span className="text-xs font-mono text-[#94A3B8]">Remaining Slots:</span>
-                  <span className="text-sm font-bold font-mono text-[#00E5FF]">{slots} Seats</span>
-                </div>
-              )}
-            </div> */}
-
-            {/* Registration Form / Status Card */}
+            {/* Registration Form / Status Card (Top Left) */}
             {isActive ? (
               <div className="bg-gradient-to-b from-[#0B1528]/90 to-[#050816]/98 border border-white/[0.1] rounded-2xl p-6 md:p-8 shadow-2xl relative">
                 
@@ -586,26 +463,6 @@ export default function WorkshopDetailPage() {
                         </div>
                       </div>
                     </div>
-
-                    {/* Actions */}
-                    {/* <div className="mt-6 flex gap-3">
-                      <button 
-                        type="button"
-                        onClick={() => alert("Ticket receipt downloaded successfully.")}
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-3 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-bold transition-all"
-                      >
-                        <Download className="w-4 h-4 text-[#00E5FF]" />
-                        <span>Download Ticket</span>
-                      </button>
-                      <button 
-                        type="button"
-                        onClick={() => alert("Shareable workshop registration link copied to clipboard.")}
-                        className="p-3 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-bold transition-all"
-                        title="Share Registration"
-                      >
-                        <Share2 className="w-4 h-4" />
-                      </button>
-                    </div> */}
 
                     <button 
                       type="button"
@@ -707,9 +564,8 @@ export default function WorkshopDetailPage() {
                         <span className="text-[10px] text-emerald-400 font-bold uppercase">Discount Applied</span>
                       </div>
                     </div>
-
                     {/* Submit Button */}
-                    {/*<button
+                    <button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full py-4 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#2563EB] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] text-white text-sm font-bold tracking-wide transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2"
@@ -725,13 +581,10 @@ export default function WorkshopDetailPage() {
                           <span>Pay & Register Now</span>
                         </>
                       )}
-                    </button>*/}
+                    </button>
 
                     {/* WhatsApp Pay Option */}
                     <div className="mt-4 pt-4 border-t border-white/[0.08] text-center space-y-2">
-                      {/* <p className="text-[11px] font-mono text-[#94A3B8] uppercase tracking-wider">
-                        Cashfree Not Working??
-                      </p> */}
                       <button
                         type="button"
                         onClick={handlePayViaWhatsapp}
@@ -808,29 +661,97 @@ export default function WorkshopDetailPage() {
               </div>
             )}
 
-            {/* Trust and FAQs Panel */}
-            {/* <div className="p-5 rounded-2xl border border-white/[0.05] bg-white/[0.01] space-y-4">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-[#00E5FF] flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Why train with Cyfo?</span>
-              </h4>
-              <ul className="space-y-2 text-xs text-[#94A3B8]">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00E5FF] mt-0.5">•</span>
-                  <span><strong>100% Practical Layout:</strong> Step-by-step code exercises with zero theoretical filler.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00E5FF] mt-0.5">•</span>
-                  <span><strong>Authorized Credentials:</strong> Recieve verifiable digital badges upon completion.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00E5FF] mt-0.5">•</span>
-                  <span><strong>Lifetime Access:</strong> Downloadable project repositories & full recording files.</span>
-                </li>
-              </ul>
-            </div> */}
+            {/* Workshop Info Section (leave as it is) */}
+            <div className="bg-gradient-to-b from-[#0B1528]/80 to-[#050816]/95 border border-white/[0.08] rounded-2xl p-6 md:p-8 shadow-xl">
+              
+              {/* Badge & Duration */}
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/20 uppercase">
+                  ⭐ Interactive Workshop
+                </span>
+                <div className="flex items-center gap-1.5 text-xs font-mono text-[#94A3B8]">
+                  <Clock className="w-4 h-4 text-[#00E5FF]" />
+                  <span>Duration: {duration}</span>
+                </div>
+              </div>
 
-            {/* Generate Ticket QR & Details Option */}
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl font-sans font-bold text-white tracking-tight leading-tight">
+                {title}
+              </h1>
+
+              {/* Description below the Title (as requested) */}
+              <p className="mt-4 text-sm md:text-base text-[#94A3B8] leading-relaxed">
+                {description}
+              </p>
+
+              {/* Topics (Put as List and tick as requested) */}
+              <div className="mt-8 pt-8 border-t border-white/[0.08]">
+                <h3 className="text-lg font-sans font-semibold text-white mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full bg-[#00E5FF]" />
+                  Curriculum & Hands-on Topics
+                </h3>
+                <ul className="space-y-3.5">
+                  {topics.map((topic, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-[#94A3B8]">
+                      <div className="mt-1 shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/30 text-[#00E5FF]">
+                        <CheckCircle className="w-3.5 h-3.5" />
+                      </div>
+                      <span className="leading-tight">{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Speaker Profiles */}
+              {isActive && (
+                <div className="mt-8 pt-8 border-t border-white/[0.08]">
+                  <h3 className="text-lg font-sans font-semibold text-white mb-4 flex items-center gap-2">
+                    <span className="w-1 h-5 rounded-full bg-[#00E5FF]" />
+                    Distinguished Workshop Instructors
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {speakers.map((speaker, idx) => (
+                      <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#00E5FF] to-[#2563EB] flex items-center justify-center font-bold font-sans text-sm text-white shadow-md">
+                          {speaker.split(" ").map(n => n[0]).join("")}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-white">{speaker}</p>
+                          <p className="text-[10px] font-mono text-[#00E5FF] uppercase">Lead Mentor</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Logistics Grid */}
+              <div className="mt-8 pt-8 border-t border-white/[0.08] grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                  <Calendar className="w-5 h-5 text-[#00E5FF] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-mono uppercase text-[#64748B]">Date & Time</p>
+                    <p className="text-sm font-semibold text-white mt-1">{dateTime}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                  <MapPin className="w-5 h-5 text-[#00E5FF] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-mono uppercase text-[#64748B]">Venue & Format</p>
+                    <p className="text-sm font-semibold text-white mt-1">{venue}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDE: Generate QR Card & Poster (5 Columns) */}
+          <div className="lg:col-span-5 space-y-8">
+
+            {/* Generate Ticket QR & Details Option (Top Right) */}
             <div className="p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-[#0B1528]/60 to-[#050816]/90 space-y-4">
               <h4 className="text-sm font-sans font-bold tracking-tight text-white flex items-center gap-2">
                 <QrCode className="w-4 h-4 text-[#00E5FF]" />
@@ -841,15 +762,6 @@ export default function WorkshopDetailPage() {
               </p>
 
               <div className="space-y-3 pt-2">
-                {/* <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Enter Ticket ID or Mobile Number"
-                    value={ticketSearchQuery}
-                    onChange={(e) => setTicketSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-lg bg-[#050816] border border-white/10 focus:border-[#00E5FF] focus:outline-none text-xs transition-all placeholder:text-white/20"
-                  />
-                </div> */}
                 <div className="relative">
                   <input
                     type="text"
@@ -944,6 +856,25 @@ export default function WorkshopDetailPage() {
                       </p>
                     </>
                   )}
+                </div>
+              )}
+            </div>
+
+            {/* Poster display (Bottom Right, 1:1 format) */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
+              <img 
+                src={poster} 
+                alt={title}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/workshopmock1.png";
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent pointer-events-none" />
+              {isActive && (
+                <div className="absolute bottom-4 left-4 right-4 bg-[#050816]/90 backdrop-blur-md px-4 py-3 rounded-xl border border-white/[0.08] flex justify-between items-center z-10">
+                  <span className="text-xs font-mono text-[#94A3B8]">Remaining Slots:</span>
+                  <span className="text-sm font-bold font-mono text-[#00E5FF]">{slots} Seats</span>
                 </div>
               )}
             </div>
