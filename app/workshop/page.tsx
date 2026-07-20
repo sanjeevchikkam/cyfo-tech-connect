@@ -204,17 +204,20 @@ export default function WorkshopDetailPage() {
       });
 
     } catch (err: any) {
-      console.error("Payment initiation failed:", err);
+      // console.error("Payment initiation failed:", err);
       
-      // Pre-config / local preview fallback simulation helper
-      const confirmSimulate = window.confirm(
-        `Cashfree Initiation Failed: ${err.message}\n\nSince this might be due to unconfigured API keys, would you like to simulate a successful payment to preview the Ticket QR screen?`
-      );
+      // // Pre-config / local preview fallback simulation helper
+      // const confirmSimulate = window.confirm(
+      //   `Cashfree Initiation Failed: ${err.message}\n\nSince this might be due to unconfigured API keys, would you like to simulate a successful payment to preview the Ticket QR screen?`
+      // );
 
-      if (confirmSimulate) {
-        const generatedId = "Tckt-" + Math.floor(10000000 + Math.random() * 90000000);
-        window.location.href = `/success?ticket_id=${generatedId}`;
-      }
+      // if (confirmSimulate) {
+      //   const generatedId = "Tckt-" + Math.floor(10000000 + Math.random() * 90000000);
+      //   window.location.href = `/success?ticket_id=${generatedId}`;
+      // }
+      console.error("Payment initiation failed: Check either Mobile number or email Entered Wrongly", err);
+
+      alert(err.message || "Payment initiation failed. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
