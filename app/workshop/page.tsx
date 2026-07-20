@@ -416,10 +416,8 @@ export default function WorkshopDetailPage() {
         {/* Content Panel */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* LEFT SIDE: Registration Form & Workshop Info (7 Columns) */}
-          <div className="lg:col-span-7 space-y-8">
-            
-            {/* Registration Form / Status Card (Top Left) */}
+          {/* 1. Registration Form / Status Card */}
+          <div className="order-1 lg:order-1 lg:col-span-7 w-full">
             {isActive ? (
               <div className="bg-gradient-to-b from-[#0B1528]/90 to-[#050816]/98 border border-white/[0.1] rounded-2xl p-6 md:p-8 shadow-2xl relative">
                 
@@ -564,8 +562,9 @@ export default function WorkshopDetailPage() {
                         <span className="text-[10px] text-emerald-400 font-bold uppercase">Discount Applied</span>
                       </div>
                     </div>
+                    
                     {/* Submit Button */}
-                    <button
+                    {/* <button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full py-4 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#2563EB] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] text-white text-sm font-bold tracking-wide transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2"
@@ -581,7 +580,8 @@ export default function WorkshopDetailPage() {
                           <span>Pay & Register Now</span>
                         </>
                       )}
-                    </button>
+                    </button> */}
+
 
                     {/* WhatsApp Pay Option */}
                     <div className="mt-4 pt-4 border-t border-white/[0.08] text-center space-y-2">
@@ -660,8 +660,10 @@ export default function WorkshopDetailPage() {
                 </Link>
               </div>
             )}
+          </div>
 
-            {/* Workshop Info Section (leave as it is) */}
+          {/* 4. Workshop Info Section */}
+          <div className="order-4 lg:order-3 lg:col-span-7 w-full">
             <div className="bg-gradient-to-b from-[#0B1528]/80 to-[#050816]/95 border border-white/[0.08] rounded-2xl p-6 md:p-8 shadow-xl">
               
               {/* Badge & Duration */}
@@ -745,13 +747,10 @@ export default function WorkshopDetailPage() {
               </div>
 
             </div>
-
           </div>
 
-          {/* RIGHT SIDE: Generate QR Card & Poster (5 Columns) */}
-          <div className="lg:col-span-5 space-y-8">
-
-            {/* Generate Ticket QR & Details Option (Top Right) */}
+          {/* 2. Generate Ticket QR & Details Option */}
+          <div className="order-2 lg:order-2 lg:col-span-5 w-full">
             <div className="p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-[#0B1528]/60 to-[#050816]/90 space-y-4">
               <h4 className="text-sm font-sans font-bold tracking-tight text-white flex items-center gap-2">
                 <QrCode className="w-4 h-4 text-[#00E5FF]" />
@@ -859,8 +858,10 @@ export default function WorkshopDetailPage() {
                 </div>
               )}
             </div>
+          </div>
 
-            {/* Poster display (Bottom Right, 1:1 format) */}
+          {/* 3. Poster display (Bottom Right, 1:1 format) */}
+          <div className="order-3 lg:order-4 lg:col-span-5 w-full">
             <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-lg aspect-square w-full">
               <img 
                 src={poster} 
@@ -878,7 +879,6 @@ export default function WorkshopDetailPage() {
                 </div>
               )}
             </div>
-
           </div>
 
         </div>
