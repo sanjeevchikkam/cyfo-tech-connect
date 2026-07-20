@@ -7,20 +7,20 @@ export default function GalleryPreview() {
   const previews = [
     {
       src: "/gallery10.jpg",
-      title: "University Lab Bootcamp",
-      location: "Bangalore",
+      title: "Cyberdevx Workshop",
+      location: "Hyderabad, Telangana",
       className: "md:col-span-2 md:row-span-1",
     },
     {
       src: "/gallery02.jpg",
-      title: "Collegiate Cyber-Range CTF",
-      location: "Mumbai",
+      title: "Ai-ML Cyber Workshop",
+      location: "Hyderabad, Telangana",
       className: "md:col-span-1 md:row-span-1",
     },
     {
       src: "/gallery11.jpg",
-      title: "Hardware Security & IoT Lab",
-      location: "Bangalore",
+      title: "College Workshop",
+      location: "Vadodara, Gujarat",
       className: "md:col-span-1 md:row-span-1",
     },
   ];

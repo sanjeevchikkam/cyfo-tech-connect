@@ -5,30 +5,30 @@ import HeaderPage from "../header/page";
 import FooterPage from "../footer/page";
 
 const ROW_1 = [
-  { src: "/gallery01.jpg", title: "University Lab Bootcamp", location: "Bangalore" },
-  { src: "/gallery02.jpg", title: "Whiteboard Defense Sessions", location: "Hyderabad" },
-  { src: "/gallery03.jpg", title: "Collegiate Cyber-Range CTF", location: "Mumbai" },
-  { src: "/gallery04.jpg", title: "CTF Victory & Certification", location: "Chennai" },
-  { src: "/gallery05.jpg", title: "Live Threat Intel Seminar", location: "Delhi NCR" },
-  { src: "/gallery11.jpg", title: "Live Threat Intel Seminar", location: "Delhi NCR" },
+  { src: "/gallery01.jpg", title: "University Lab Bootcamp", location: "Vadodara" },
+  { src: "/gallery02.jpg", title: "Ai-ML Cyber Workshop", location: "Hyderabad" },
+  { src: "/gallery03.jpg", title: "Collegiate Cyber-Range CTF", location: "Vadodara" },
+  { src: "/gallery04.jpg", title: "CTF Victory & Certification", location: "Vadodara" },
+  { src: "/gallery05.jpg", title: "Live Threat Intel Seminar", location: "Hyderabad" },
+  { src: "/gallery11.jpg", title: "College Workshop", location: "Vadodara" },
 ];
 
 const ROW_2 = [
-  { src: "/gallery10.jpg", title: "Hardware Security & IoT Lab", location: "Bangalore" },
-  { src: "/gallery09.jpg", title: "Interactive Career Seminar", location: "Pune" },
-  { src: "/gallery08.jpg", title: "Penetration Testing Audit", location: "Hyderabad" },
-  { src: "/gallery07.jpg", title: "Exploit Coding Lab", location: "Kochi" },
-  { src: "/gallery06.jpg", title: "Cyber Security Command Center", location: "Mumbai" },
-  { src: "/gallery11.jpg", title: "Live Threat Intel Seminar", location: "Delhi NCR" },
+  { src: "/gallery10.jpg", title: "Cyberdevx Workshop", location: "Hyderabad" },
+  { src: "/gallery09.jpg", title: "Interactive Career Seminar", location: "Hyderabad" },
+  { src: "/gallery08.jpg", title: "Penetration Testing Audit", location: "Vadodara" },
+  { src: "/gallery07.jpg", title: "Exploit Coding Lab", location: "Hyderabad" },
+  { src: "/gallery06.jpg", title: "Cyber Security Command Center", location: "Hyderabad" },
+  { src: "/gallery11.jpg", title: "College Workshop", location: "Vadodara" },
 ];
 
 const ROW_3 = [
-  { src: "/gallery03.jpg", title: "Collegiate Cyber-Range CTF", location: "Mumbai" },
-  { src: "/gallery05.jpg", title: "Live Threat Intel Seminar", location: "Delhi NCR" },
-  { src: "/gallery12.jpg", title: "Hardware Security & IoT Lab", location: "Bangalore" },
-  { src: "/gallery01.jpg", title: "University Lab Bootcamp", location: "Bangalore" },
-  { src: "/gallery08.jpg", title: "Penetration Testing Audit", location: "Hyderabad" },
-  { src: "/gallery10.jpg", title: "Live Threat Intel Seminar", location: "Delhi NCR" },
+  { src: "/gallery03.jpg", title: "Collegiate Cyber-Range CTF", location: "Hyderabad" },
+  { src: "/gallery05.jpg", title: "Live Threat Intel Seminar", location: "Vadodara" },
+  { src: "/gallery12.jpg", title: "Hardware Security & IoT Lab", location: "vadodara" },
+  { src: "/gallery11.jpg", title: "College Workshop", location: "Vadodara" },
+  { src: "/gallery02.jpg", title: "Ai-ML Cyber Workshop", location: "Hyderabad" },
+  { src: "/gallery10.jpg", title: "LCyberdevx Workshop", location: "Hyderabad" },
 ];
 
 export default function GalleryPage() {
