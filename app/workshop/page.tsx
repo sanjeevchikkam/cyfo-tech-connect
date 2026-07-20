@@ -280,7 +280,7 @@ export default function WorkshopDetailPage() {
 *Important*: I encountered issues with Cashfree payment. Please share UPI details/QR to complete payment and approve my ticket entry. Thank you!`;
 
       // 4. Open WhatsApp Link
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=918341330784&text=${encodeURIComponent(formattedMessage)}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=918019002701&text=${encodeURIComponent(formattedMessage)}`;
       window.open(whatsappUrl, "_blank");
 
       // Set state to show the success view and display the generated ticket info
